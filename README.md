@@ -32,7 +32,7 @@ The application dynamically configures its database connection using the followi
 | `DB_PORT` | Port of the PostgreSQL server | `5432` |
 | `DB_NAME` | Database name | `appdb` |
 | `DB_USER` | Database user name | `appuser` |
-| `DB_PASSWORD`| Database user password | `apppassword` |
+| `DB_PASSWORD`| Database user password | `` |
 
 ---
 
