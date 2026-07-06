@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS items (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    quantity INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+INSERT INTO items (name, quantity)
+VALUES ('Sample Widget', 42)
+ON CONFLICT DO NOTHING;

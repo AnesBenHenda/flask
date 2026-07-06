@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: flask-app-alerts
+  namespace: monitoring
+  labels:
+    release: kube-prom
+spec:
+  groups:
+    - name: flask-app
+      rules:
+        - alert: FlaskWebDown
+          expr: kube_deployment_status_replicas_available{namespace="intern", deployment="web"} == 0
+          for: 2m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Flask web deployment has no available replicas"
+            description: "The web deployment in capstone namespace has been at 0 available replicas for 2+ minutes."

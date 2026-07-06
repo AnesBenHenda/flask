@@ -1,0 +1,109 @@
+#################################
+# Python
+#################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Flask / env files
+.env
+.flaskenv
+
+#################################
+# Terraform
+#################################
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Terraform variable files (often sensitive)
+*.tfvars
+*.tfvars.json
+
+#################################
+# Kubernetes secrets / configs
+#################################
+kubeconfig
+*.kubeconfig
+
+#################################
+# Docker
+#################################
+.docker/
+docker-compose.override.yml
+
+#################################
+# Database / local volumes
+#################################
+db_data/
+postgres_data/
+data/
+
+#################################
+# Keys / Secrets (CRITICAL)
+#################################
+*.pem
+*.key
+*.p12
+*.pfx
+
+gha-deploy-key
+gha-deploy-key.pub
+
+# SSH keys
+id_rsa
+id_rsa.pub
+
+#################################
+# Logs
+#################################
+*.log
+logs/
+
+#################################
+# IDEs / Editors
+#################################
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+#################################
+# OS files
+#################################
+.DS_Store
+Thumbs.db
+
+#################################
+# Archive / backups
+#################################
+*.bak
+*.backup
+*.old
+
+#################################
+# Build artifacts
+#################################
+dist/
+build/
+*.egg-info/
